@@ -9,7 +9,7 @@
 		var layout_flat = Orientation(3.0 / 2.0, 0.0, Math.sqrt(3.0) / 2.0, Math.sqrt(3.0), 2.0 / 3.0, 0.0, -1.0 / 3.0, Math.sqrt(3.0) / 3.0, 0.0);
 		var flat = Layout(layout_flat, Point(40, 40), Point(0,0));
 		var center ;
-		
+		Client.askNewPlayer();
 		document.getElementById('canvasContainer').addEventListener('contextmenu', function(e) {
             e.preventDefault();
 			//e.stopPropagation();
