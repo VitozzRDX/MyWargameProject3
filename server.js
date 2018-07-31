@@ -19,7 +19,11 @@ server.listen(process.env.PORT || 8081,function(){
 
 io.on('connection',function(socket){
     socket.on('newplayer',function(){
-        console.log('np');
+        socket.emit('allplayers',logtoAll());
         socket.broadcast.emit('newplayer');
     })
 });
+
+function logtoAll() {
+    console.log('np')
+};
