@@ -19,6 +19,6 @@ server.listen(process.env.PORT || 8081,function(){
 
 io.on('connection',function(socket){
     socket.on('newplayer',function(){
-        console.log ('np')
+        socket.broadcast.emit('newplayer');
     })
 });
